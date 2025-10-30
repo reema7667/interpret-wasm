@@ -11,22 +11,24 @@ pub fn validate() {
             n_operands = get_n_operands(inst);
             if len(operands) >= n_operands() {
                 inst.execute(operands.get_slice());
-                // if n_operands == 1 {
-                //     inst.execute(operands.pop()) 
-                // }   
-                // else if n_operands == 2 {
-                    
-                // }
             }
-            // for operand in n_operands{
-            //     rhs = operands.pop();
-            //     if let Some(rhs) = rhs {
-
-            //     }
-            // }
-
+            return false;
         }
     }
+    if operands.len() >= 0{
+        return false;
+    }
+    return true;
+}
+
+static i32_range = (0, 20);
+static i64_range = (20, 60);
+pub fn opcode_type(opcode: OP){
+    if opcode >= i32_range.0 and opcode <= i32_range {
+        return I32;
+    }
+    else if ....
+
 }
 
 pub fn execute(n_args: OP, operand : OP){
